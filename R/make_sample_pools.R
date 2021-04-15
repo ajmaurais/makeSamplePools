@@ -26,11 +26,10 @@ summary <- dat %>% dplyr::group_by(group) %>%
   dplyr::summarise(n = n(), minRange = getMinRange(mw)) %>%
   dplyr::ungroup()
 
-#output <- dat %>% dplyr::select(bin)
 output <- dat
 output <- output[order(output$group),]
-#write.table(output, file = 'results/compound_groups.tsv', sep = '\t', row.names = FALSE)
-#write.table(summary, file = 'results/groups_summary.tsv', sep = '\t', row.names = FALSE)
+write.table(output, file = 'results/compound_groups.tsv', sep = '\t', row.names = FALSE, quote = F)
+write.table(summary, file = 'results/groups_summary.tsv', sep = '\t', row.names = FALSE, quote = F)
 
 output2 <- output %>% dplyr::select(-mw) %>%
   tidyr::spread(key = group, value = ID)

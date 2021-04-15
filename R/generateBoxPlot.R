@@ -42,3 +42,5 @@ boxPlot <- ggplot(summary_all, aes(x = as.factor(poolSize), y = minRange)) +
   xlab('Pool size') +
   ylab('Minium MW range')
 
+ggsave('plots/pool_box_plot.pdf', boxPlot, width = 7, height = 5)
+

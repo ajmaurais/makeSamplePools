@@ -2,6 +2,7 @@
 .DS_Store
 results/*
 reports/*
+plots/*
 umass_fragment_library.Rproj
 
 # History files
