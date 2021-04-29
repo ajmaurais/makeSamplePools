@@ -40,8 +40,7 @@ double getMinRange(Rcpp::NumericVector vec)
   {
     for(std::size_t j = 0; j < vecLen; j++)
     {
-      if(i == j)
-        continue;
+      if(i == j) continue;
       curRange = std::abs(vec[i] - vec[j]);
       if(curRange < minRange)
         minRange = curRange;
