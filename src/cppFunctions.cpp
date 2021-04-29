@@ -55,10 +55,10 @@ double getMinRange(Rcpp::NumericVector vec)
 Rcpp::NumericVector binValues(unsigned int numInBin, unsigned int numValues)
 {
   Rcpp::NumericVector ret;
-  int binNumber = 0;
-  int countInBin = 0;
+  unsigned int binNumber = 0;
+  unsigned int countInBin = 0;
   
-  for(int i = 0; i < numValues; i++)
+  for(unsigned int i = 0; i < numValues; i++)
   {
     if(countInBin % numInBin == 0)
       binNumber++;
