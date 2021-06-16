@@ -4,6 +4,7 @@ results/*
 reports/*
 plots/*
 umass_fragment_library.Rproj
+tables/*
 
 # History files
 .Rhistory
